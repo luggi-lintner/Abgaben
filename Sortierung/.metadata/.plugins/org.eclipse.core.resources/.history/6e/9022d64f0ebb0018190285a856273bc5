@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+
+public class main {
+
+	public static void main(String[] args) {
+		
+	
+		ArrayList<Integer> zahlen = new ArrayList<Integer>();
+		
+		zahlen.add(8);
+		zahlen.add(7);
+		zahlen.add(4);
+		zahlen.add(10);
+		zahlen.add(3);
+		zahlen.add(17);
+		zahlen.add(11);
+		zahlen.add(-4);
+		
+		zahlen.sort(null);
+		System.out.println(zahlen);
+	
+	}
+
+}
