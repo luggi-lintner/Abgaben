@@ -1,0 +1,27 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import LinkedList.LinkedList;
+
+import org.junit.Test;
+
+public class test {
+
+	@Test
+	public void testBackAddValue() 
+	{
+		LinkedList ll = new LinkedList();
+		ll.backadd(5);
+		assertEquals(5,5);
+		
+	}
+	
+	public void testFrontAddValue()
+	{
+		LinkedList ll = new LinkedList();
+		ll.frontadd(5);
+		assertEquals(5,5);
+	}
+
+}

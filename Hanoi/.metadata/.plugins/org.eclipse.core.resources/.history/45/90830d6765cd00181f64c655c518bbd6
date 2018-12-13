@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+public class Main {
+
+	public static void main(String[] args) {
+		
+		ArrayList A = new ArrayList(4);
+		ArrayList B = new ArrayList(4);
+		ArrayList C = new ArrayList(4);
+		
+		for(int i=1; i<=4; i++)
+		{
+			A.add(i);
+		}
+
+		System.out.println(A);
+		System.out.println(B);
+		System.out.println(C);
+		
+	}
+
+}

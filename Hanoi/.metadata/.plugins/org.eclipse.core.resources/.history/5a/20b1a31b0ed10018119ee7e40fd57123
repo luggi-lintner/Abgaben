@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+public class Main {
+
+	public static void main(String[] args) {
+		
+				
+		public static void move(int n, ArrayList<Integer> src, ArrayList<Integer> aux, ArrayList<Integer> target)
+		{
+			move(n-1, src, target, aus);
+			target.add(src._pop());
+			move(n-1, aux,src,target);
+		}
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+public class Main {
+
+	public static void main(String[] args) {
+		
+				
+		private void move(int n, ArrayList<Integer> src, ArrayList<Integer> aux, ArrayList<Integer> target)
+		{
+			move(n-1, src, target, aux);
+			target.add(src._pop());
+			move(n-1, aux,src,target);
+			if(n=0)
+			{
+				return;
+			}
+		}
+		
+	}
+
+}
+		
+	}
+}
