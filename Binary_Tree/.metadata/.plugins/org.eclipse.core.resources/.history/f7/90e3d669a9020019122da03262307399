@@ -1,0 +1,71 @@
+package BST;
+
+public class BinaryTree {
+	
+	Node root;
+	
+	private Node add(Node aktuell, int value)
+	{
+		if(aktuell==null)
+		{
+			return new Node(value);
+		}
+		
+		if(value < aktuell.value)
+		{
+			aktuell.left= add(aktuell.left, value);
+		}
+		
+		else if(value > aktuell.value)
+		{
+			aktuell.right = add(aktuell.right, value);
+		}
+		
+		else
+		{
+			return aktuell;
+		}
+		
+		return aktuell;
+	}
+	
+	
+	public void addFromHead(int value)
+	{
+		root = add(root,value);
+	}
+	
+	public boolean enthaelt(Node aktuell, int value) {
+	    if (aktuell == null) {
+	        return false;
+	    } 
+	    if (value == aktuell.value) {
+	        return true;
+	    } 
+	   if(value < aktuell.value)
+	   {
+		   return enthaelt(aktuell.left, value);
+	   }
+	   else if(value > aktuell.value)
+	   {
+		   return enthaelt(aktuell.right, value);
+	   }
+	  	      
+	    
+	}
+	
+	public boolean enthealtFromHead(int value)
+	{
+		return enthaelt(root, value);
+	}
+	
+	
+	
+	
+	
+
+}
+
+	
+	
+	

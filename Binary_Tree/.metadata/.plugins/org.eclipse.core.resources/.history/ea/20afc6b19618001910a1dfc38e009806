@@ -1,0 +1,96 @@
+package BST;
+
+public class BinaryTree 
+{
+	
+	Node root;
+	
+	private Node add(Node aktuell, int value)
+	{
+		if(aktuell==null)
+		{
+			return new Node(value);
+		}
+		
+		if(value < aktuell.value)
+		{
+			aktuell.left= add(aktuell.left, value);
+		}
+		
+		else if(value > aktuell.value)
+		{
+			aktuell.right = add(aktuell.right, value);
+		}
+		
+		else
+		{
+			return aktuell;
+		}
+		
+		return aktuell;
+	}
+	
+	
+	public void addFromHead(int value)
+	{
+		root = add(root,value);
+	}
+	
+	public boolean enthaelt(Node aktuell, int value) 
+	{
+	    if (aktuell == null) {
+	        return false;
+	    } 
+	    if (value == aktuell.value) {
+	        return true;
+	    } 
+	    return value < aktuell.value
+	    	      ? enthaelt(aktuell.left, value)
+	    	      : enthaelt(aktuell.right, value);
+	  	      
+	    
+	}
+	
+	public boolean enthealtFromHead(int value)
+	{
+		return enthaelt(root, value);
+	}
+	
+	private Node delete(Node aktuell, int value)
+	{
+		if(aktuell.right == null && aktuell.left == null)
+		 {
+			 return null;
+		 }
+		
+		if(aktuell.right == null)
+		{
+			return aktuell.right;
+		}
+		
+		if(aktuell.left == null)
+		{
+			return aktuell.left;
+		}
+		
+		int smallestValue = findSmallest(aktuell.right);
+		aktuell.value = smallestValue;
+		aktuell.right = delete(aktuell.right, smallestValue);
+		return aktuell;
+	}
+	
+	private int findSmallest(Node node)
+	{
+		while(node.getValue() != null)
+		{
+			
+		}
+	}
+	
+		
+	public void deleteFromHead(int value)
+	{
+		root = delete(root, value);
+		
+	}
+}
