@@ -114,7 +114,40 @@ public class BinaryTree
 		
 	}
 	
-	public void print(Node aktuell)
+	public int getDepth()
+	{
+		if (this.head == null)
+		{
+			return 0;
+		}
+		
+		return getDepth(this.head, 1);
+	}
+	
+	private int getDepth(Node n, int actDepth)
+	{
+		if(n.right == null && n.left == null)
+		{
+			return actDepth;
+		}
+		
+		int leftDepth = 0;
+		int rightDepth = 0;
+		
+		if(n.left != null)
+		{
+			leftDepth = getDepth(n.left, actDepth + 1);
+		}
+		
+		if(n.right != null)
+		{
+			rightDepth = getDepth(n.right, actDepth + 1);
+		}
+		
+		return Math.max(leftDepth, rightDepth);
+	}
+	
+	/*public void print(Node aktuell)
 	{
 		int[][] ausgabe = new int[100][100];
 		
@@ -122,7 +155,7 @@ public class BinaryTree
 		
 		
 		
-	}
+	}*/
 	
 	
 }
