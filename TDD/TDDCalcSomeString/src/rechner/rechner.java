@@ -9,8 +9,16 @@ public class rechner {
 		{
 			throw new InvalidFormatException();
 		}
-		return Integer.parseInt(stringNumbers[0]) + Integer.parseInt(stringNumbers[1]);
+		try
+		{
+			
+			return Integer.parseInt(stringNumbers[0]) + Integer.parseInt(stringNumbers[1]);
+		}catch(NumberFormatException e) {
+			throw new InvalidFormatException();
+		}
+		
 	}
+
 	
 
 }

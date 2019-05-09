@@ -21,4 +21,8 @@ public class TestCalcSum {
 		rechner.add("4 7");
 	}
 
+	@Test(expected=InvalidFormatException.class)
+	public void invalidNumber() throws InvalidFormatException {
+		rechner.add("4;a");
+	}
 }
