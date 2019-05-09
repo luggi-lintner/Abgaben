@@ -1,0 +1,10 @@
+package rechner;
+
+public class rechner {
+	
+	public static int add(String string)
+	{
+		
+	}
+
+}
