@@ -25,4 +25,17 @@ public class TestCalcSum {
 	public void invalidNumber() throws InvalidFormatException {
 		rechner.add("4;a");
 	}
+	
+	@Test
+	public void validInputDelimeter() throws InvalidFormatException {
+		assertEquals(11,rechner.add("4 7"," "));
+	}
+	
+	@Test
+	public void validInputMore() throws InvalidFormatException {
+		assertEquals(23,rechner.add("4;7;1;5;6"));
+		
+	}
+	
+	
 }
