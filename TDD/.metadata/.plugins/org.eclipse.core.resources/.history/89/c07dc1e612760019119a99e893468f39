@@ -1,0 +1,29 @@
+package rechner;
+
+public class rechner {
+	
+	public static int add(String input, String delimeter) throws InvalidFormatException
+	{
+		String[] stringNumbers = input.split(delimeter);
+		if(stringNumbers.length<2)
+		{
+			throw new InvalidFormatException();
+		}
+		try
+		{
+			
+			return Integer.parseInt(stringNumbers[0]) + Integer.parseInt(stringNumbers[1]);
+		}catch(NumberFormatException e) {
+			throw new InvalidFormatException();
+		}
+		
+	}
+	
+	public static int add(String input) throws InvalidFormatException
+	{
+		return rechner.add(input, ";");
+	}
+
+	
+
+}

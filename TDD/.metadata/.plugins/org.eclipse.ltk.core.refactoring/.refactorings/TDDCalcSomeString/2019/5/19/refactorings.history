@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;string&apos; in &apos;rechner.rechner.add(...)&apos; to &apos;input&apos;&#x0D;&#x0A;- Original project: &apos;TDDCalcSomeString&apos;&#x0D;&#x0A;- Original element: &apos;rechner.rechner.add(String).string&apos;&#x0D;&#x0A;- Renamed element: &apos;string&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;string&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;rechner{rechner.java[rechner~add~QString;@string!70!82!77!82!QString;!0!true" name="input" references="true" stamp="1557411513953" version="1.0"/>
+</session>

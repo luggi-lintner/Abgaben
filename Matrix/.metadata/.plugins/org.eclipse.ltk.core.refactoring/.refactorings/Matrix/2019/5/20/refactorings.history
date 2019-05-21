@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;matrix&apos; in &apos;Matrix.Matrix.abfrage(...)&apos; to &apos;abfrageMatrix&apos;&#x0D;&#x0A;- Original project: &apos;Matrix&apos;&#x0D;&#x0A;- Original element: &apos;Matrix.Matrix.abfrage(int, int).matrix&apos;&#x0D;&#x0A;- Renamed element: &apos;matrix&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;matrix&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;Matrix{Matrix.java[Matrix~abfrage~I~I@matrix!220!254!224!229!\[\[I!0!false" name="abfrageMatrix" references="true" stamp="1558010335387" version="1.0"/>
+</session>

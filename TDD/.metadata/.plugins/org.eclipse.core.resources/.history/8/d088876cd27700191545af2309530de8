@@ -1,0 +1,12 @@
+package Matrix;
+
+public class Matrix {
+	
+	int[][] matrix = new int [2][2];
+	int[][] matrix2 = new int [2][2];
+	
+	int matrix[][]={1,2},{3,4};
+	
+	
+
+}

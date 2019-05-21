@@ -1,0 +1,30 @@
+package Matrix;
+
+public class Matrix {
+	
+	//int[][] matrix = new int [2][2];
+	//int[][] matrix2 = new int [2][2];
+		
+	
+		
+		
+	int matrix2[][]={{1,1},
+					{1,1}};
+	
+	
+	public static int abfrage(int a, int b){
+		
+		int matrix[][]={{1,2},
+				{3,4}};
+		int erg = matrix[a][b];
+		System.out.println(erg);
+		return erg;
+		
+	
+	}
+		
+
+	
+
+
+}

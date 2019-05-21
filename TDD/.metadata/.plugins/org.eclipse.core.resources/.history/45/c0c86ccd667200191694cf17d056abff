@@ -1,0 +1,12 @@
+package rechner;
+
+public class rechner {
+	
+	public static int add(String input)
+	{
+		String[] stringNumbers = input.split(";");
+		return Integer.parseInt(stringNumbers[0]) + Integer.parseInt(stringNumbers[1]);
+	}
+	
+
+}

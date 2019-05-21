@@ -1,0 +1,17 @@
+package Test;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+import Matrix.*;
+
+public class MatrixTest {
+
+	@Test
+	public void abfrageTest()
+	{
+		
+		assertEquals(2,Matrix.abfrage(1,2));
+		assertEquals(1, Matrix.abfrage(1,1));
+	}
+	
+}
