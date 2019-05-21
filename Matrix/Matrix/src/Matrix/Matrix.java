@@ -2,13 +2,13 @@ package Matrix;
 
 public class Matrix {
 	
-	public static int multiplication(int[][] matrixA, int[][] matrixB, int a, int b) throws InvalidMatrxException
+	public static float multiplication(float[][] matrixA, float[][] matrixB, int a, int b) throws InvalidMatrxException
 	{
 		if(matrixA[0].length != matrixB.length)
 		{
 			throw new InvalidMatrxException();
 		}
-		int[][] erg = new int[100][100];
+		float[][] erg = new float[100][100];
 		for(int i = 0; i < matrixA.length; i++)
 		{
 			for(int j = 0; j < matrixB[0].length; j++)
@@ -22,10 +22,14 @@ public class Matrix {
 		return erg[a][b]; 
 	}
 	
-	public static int addition(int[][] matrixA, int[][] matrixB, int a, int b)
+	public static float addition(float[][] matrixA, float[][] matrixB, int a, int b) throws InvalidMatrxException
 	{
+		if(matrixA.length != matrixB.length || matrixA[0].length != matrixB[0].length)
+		{
+			throw new InvalidMatrxException();
+		}
 		
-		int[][] erg = new int[100][100];
+		float[][] erg = new float[100][100];
 		
 		for(int i=0; i<matrixA.length; i++)
 		{
@@ -38,13 +42,26 @@ public class Matrix {
 		return erg[a][b];
 	}
 	
-	
-	
-	public static int abfrage(int a, int b){
+	public static float skalarMultiplication(float[][] matrixA, float skalar, int a, int b)
+	{
+		float[][] erg = new float[100][100];
+		for(int i=0; i<matrixA.length; i++)
+		{
+			for(int j=0; j<matrixA[0].length; j++)
+			{
+				erg[i][j] += matrixA[i][j] * skalar;
+			}
+		}
 		
-		int abfrageMatrix[][]={{1,2},
-				{3,4}};
-		int erg = abfrageMatrix[a][b];
+		return erg[a][b];
+	}
+	
+	
+	
+	public static float abfrage(int a, int b){
+		
+		float abfrageMatrix[][]={{1,2},{3,4}};
+		float erg = abfrageMatrix[a][b];
 		
 		return erg;
 		
