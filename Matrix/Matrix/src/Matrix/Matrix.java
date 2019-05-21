@@ -2,10 +2,12 @@ package Matrix;
 
 public class Matrix {
 	
-	public static int multiplication(int a, int b)
+	public static int multiplication(int[][] matrixA, int[][] matrixB, int a, int b) throws InvalidMatrxException
 	{
-		int[][] matrixA ={{1,2},{3,4}};
-		int[][] matrixB ={{1,1},{1,1}}; 
+		if(matrixA[0].length != matrixB.length)
+		{
+			throw new InvalidMatrxException();
+		}
 		int[][] erg = new int[100][100];
 		for(int i = 0; i < matrixA.length; i++)
 		{
@@ -20,17 +22,16 @@ public class Matrix {
 		return erg[a][b]; 
 	}
 	
-	public static int ad(int a, int b)
+	public static int addition(int[][] matrixA, int[][] matrixB, int a, int b)
 	{
-		int[][] mat1 ={{1,2},{3,4}};
-		int[][] mat2 = {{1,1},{1,1}};
+		
 		int[][] erg = new int[100][100];
 		
-		for(int i=0; i<mat1.length; i++)
+		for(int i=0; i<matrixA.length; i++)
 		{
-			for(int j=0; j<mat2[0].length; j++)
+			for(int j=0; j<matrixB[0].length; j++)
 			{
-				erg[i][j] += mat1[i][j] + mat2[i][j];
+				erg[i][j] += matrixA[i][j] + matrixB[i][j];
 			}
 		}
 		

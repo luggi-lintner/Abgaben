@@ -3,6 +3,7 @@ package Test;
 import static org.junit.Assert.*;
 import org.junit.Test;
 import Matrix.*;
+import Matrix.InvalidMatrxException;
 
 public class MatrixTest {
 
@@ -14,16 +15,33 @@ public class MatrixTest {
 		assertEquals(4, Matrix.abfrage(1,1));
 	}
 	
+	
+	
 	@Test
-	public void mulTest()
+	public void mulTest() throws InvalidMatrxException
 	{
-		assertEquals(3,Matrix.multiplication(0,0));	
+		int[][] matrixA ={{1,2},{3,4}};
+		int[][] matrixB = {{1,1},{1,1}};
+		assertEquals(7,Matrix.multiplication(matrixA, matrixB,1,1));	
 		
 	}
 	
 	@Test
 	public void addTest()
 	{
-		assertEquals(5,Matrix.ad(1,1)); 
+		int[][] matrixA ={{1,2},{3,4}};
+		int[][] matrixB = {{1,1},{1,1}};
+		assertEquals(5,Matrix.addition(matrixA, matrixB, 1,1)); 
 	}
+	
+	@Test(expected=InvalidMatrxException.class)
+	public void invalidMatrix() throws InvalidMatrxException 
+	{
+		int[][] matrixA ={{1,2,1},{3,4,1}};
+		int[][] matrixB = {{1,1},{1,1}};
+		Matrix.multiplication(matrixA, matrixB, 1, 1);
+		
+	}
+			
+	
 }
