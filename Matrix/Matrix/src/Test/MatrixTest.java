@@ -63,10 +63,8 @@ public class MatrixTest {
 	{
 		float[][] matrixA ={{1,2},{3,4}};
 		float skalar = (float) 3.24;
-		
-		
 		assertEquals(12.96,Matrix.skalarMultiplication(matrixA, skalar, 1,1),0.0001);
-		
+		 
 	}
 	
 }
