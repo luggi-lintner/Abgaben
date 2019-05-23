@@ -20,9 +20,15 @@ public class MatrixTest {
 	@Test
 	public void testMultiplication() throws InvalidMatrxException
 	{
-		float[][] matrixA ={{(float) 1.5,2},{3,4}};
+		float[][] matrixA ={{(float) 1.5,2},{3,4},{3,3}};
 		float[][] matrixB = {{1,1},{(float) 1.8,1}};
 		assertEquals(5.1,Matrix.multiplication(matrixA, matrixB,0,0), 0.0001);	
+		assertEquals(3.5,Matrix.multiplication(matrixA, matrixB,0,1), 0.0001);	
+		assertEquals(10.2,Matrix.multiplication(matrixA, matrixB,1,0), 0.0001);	
+		assertEquals(7,Matrix.multiplication(matrixA, matrixB,1,1), 0.0001);
+		assertEquals(8.4,Matrix.multiplication(matrixA, matrixB,2,0), 0.0001);	
+		assertEquals(6,Matrix.multiplication(matrixA, matrixB,2,1), 0.0001);	
+		
 		
 	}
 	
@@ -31,7 +37,8 @@ public class MatrixTest {
 	{
 		float[][] matrixA ={{1,2},{3,4}};
 		float[][] matrixB = {{1,1},{1,1}};
-		assertEquals(5,Matrix.addition(matrixA, matrixB, 1,1), 0.0001); 
+		assertEquals(3,Matrix.addition(matrixA, matrixB, 0, 1),0.001);
+	
 	}
 	
 	@Test(expected=InvalidMatrxException.class)
