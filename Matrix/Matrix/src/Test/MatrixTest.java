@@ -78,11 +78,11 @@ public class MatrixTest {
 	}
 	
 	@Test
-	public void testSm()
+	public void testSigmoid()
 	{
 		float[][] matrixA ={{80},{-100}};
-		assertEquals(1,Matrix.sgm(matrixA, 0, 0),0.0001);
-		assertEquals(0,Matrix.sgm(matrixA, 1, 0),0.0001);
+		assertEquals(1,Matrix.sigmoid(matrixA, 0, 0),0.0001);
+		assertEquals(0,Matrix.sigmoid(matrixA, 1, 0),0.0001);
 		
 	}
 	

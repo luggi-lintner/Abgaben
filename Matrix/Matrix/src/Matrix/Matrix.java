@@ -1,5 +1,5 @@
 package Matrix;
-import java.math.*;
+
 
 public class Matrix {
 	 
@@ -16,7 +16,7 @@ public class Matrix {
 			for(int j = 0; j < matrixB[0].length; j++)
 			{
 				for(int k = 0; k < matrixA[0].length; k++)
-				{
+
 					erg[i][j] += matrixA[i][k] * matrixB[k][j];
 				}
 			}
@@ -58,7 +58,7 @@ public class Matrix {
 		return erg[a][b];
 	}
 	
-	public static float sgm(float[][] matrixA, int a, int b)
+	public static float sigmoid(float[][] matrixA, int a, int b)
 	{
 		float [][] erg = new float [10000][10000];
 		for(int i=0; i<matrixA.length; i++)
