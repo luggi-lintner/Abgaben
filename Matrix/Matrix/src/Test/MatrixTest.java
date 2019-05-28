@@ -81,8 +81,11 @@ public class MatrixTest {
 	public void testSigmoid()
 	{
 		float[][] matrixA ={{80},{-100}};
+		float[][] matrixB ={{0},{6}};
 		assertEquals(1,Matrix.sigmoid(matrixA, 0, 0),0.0001);
 		assertEquals(0,Matrix.sigmoid(matrixA, 1, 0),0.0001);
+		assertEquals(0.5,Matrix.sigmoid(matrixB, 0, 0),0.0001);
+		assertEquals(0.9975,Matrix.sigmoid(matrixB, 1, 0),0.0001); 
 		
 	}
 	

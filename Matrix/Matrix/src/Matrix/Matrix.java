@@ -16,7 +16,7 @@ public class Matrix {
 			for(int j = 0; j < matrixB[0].length; j++)
 			{
 				for(int k = 0; k < matrixA[0].length; k++)
-
+				{
 					erg[i][j] += matrixA[i][k] * matrixB[k][j];
 				}
 			}
@@ -65,7 +65,7 @@ public class Matrix {
 		{
 			for(int j=0; j<matrixA[0].length; j++)
 			{
-				erg[i][j] += 1/(Math.exp(matrixA[i][j]*-1)+1) ;
+				erg[i][j] += 1/(Math.exp(-matrixA[i][j])+1) ;
 			}
 		}
 		return erg[a][b];
