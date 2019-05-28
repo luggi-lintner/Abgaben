@@ -111,3 +111,9 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.e
 
 !ENTRY org.eclipse.jface.text 2 0 2019-05-28 08:53:13.178
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-05-28 10:10:53.693
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-05-28 10:10:53.706
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

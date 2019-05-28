@@ -19,7 +19,7 @@ public class Matrix {
 				{
 					erg[i][j] += matrixA[i][k] * matrixB[k][j];
 				}
-			}
+			} 
 		}
 		return erg[a][b]; 
 	}
