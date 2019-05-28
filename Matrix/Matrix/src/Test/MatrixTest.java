@@ -55,7 +55,17 @@ public class MatrixTest {
 	{
 		float[][] matrixA ={{1,2,1},{3,4}};
 		float[][] matrixB = {{1,1},{1,1}};
-		Matrix.addition(matrixA, matrixB, 1, 1);
+		Matrix.addition(matrixA, matrixB, 1, 1); 
+	}
+	
+	@Test
+	public void testBigMatrixMultiplication() throws InvalidMatrxException
+	{ 
+		float[][] matrixA ={{1,2,3,4},{1,2,3,4},{1,2,3,4},{1,2,3,4}};
+		float[][] matrixB={{1,2,3,4},{1,2,3,4},{1,2,3,4},{1,2,3,4}};
+		assertEquals(40,Matrix.multiplication(matrixA, matrixB, 2, 3),0.0001);
+		assertEquals(30,Matrix.multiplication(matrixA, matrixB, 3, 2),0.0001);
+		assertEquals(10,Matrix.multiplication(matrixA, matrixB, 0, 0),0.0001);
 	}
 	
 	@Test
@@ -65,6 +75,15 @@ public class MatrixTest {
 		float skalar = (float) 3.24;
 		assertEquals(12.96,Matrix.skalarMultiplication(matrixA, skalar, 1,1),0.0001);
 		 
+	}
+	
+	@Test
+	public void testSm()
+	{
+		float[][] matrixA ={{80},{-100}};
+		assertEquals(1,Matrix.sgm(matrixA, 0, 0),0.0001);
+		assertEquals(0,Matrix.sgm(matrixA, 1, 0),0.0001);
+		
 	}
 	
 }

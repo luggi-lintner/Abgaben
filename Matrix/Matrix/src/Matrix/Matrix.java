@@ -1,12 +1,14 @@
 package Matrix;
+import java.math.*;
 
 public class Matrix {
-	
+	 
 	public static float multiplication(float[][] matrixA, float[][] matrixB, int a, int b) throws InvalidMatrxException
 	{
 		if(matrixA[0].length != matrixB.length)
 		{
 			throw new InvalidMatrxException();
+			
 		}
 		float[][] erg = new float[100][100];
 		for(int i = 0; i < matrixA.length; i++)
@@ -53,6 +55,19 @@ public class Matrix {
 			}
 		}
 		
+		return erg[a][b];
+	}
+	
+	public static float sgm(float[][] matrixA, int a, int b)
+	{
+		float [][] erg = new float [10000][10000];
+		for(int i=0; i<matrixA.length; i++)
+		{
+			for(int j=0; j<matrixA[0].length; j++)
+			{
+				erg[i][j] += 1/(Math.exp(matrixA[i][j]*-1)+1) ;
+			}
+		}
 		return erg[a][b];
 	}
 	
