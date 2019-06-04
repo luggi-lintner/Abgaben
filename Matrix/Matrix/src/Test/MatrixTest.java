@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import Matrix.*;
 import Matrix.InvalidMatrxException;
+import Matrix.ANN.*;
 
 public class MatrixTest {
 
@@ -87,6 +88,14 @@ public class MatrixTest {
 		assertEquals(0.5,Matrix.sigmoid(matrixB, 0, 0),0.0001);
 		assertEquals(0.9975,Matrix.sigmoid(matrixB, 1, 0),0.0001); 
 		
+	}
+	
+	
+	@Test
+	public void arrayTestTest()
+	{
+		int[] hl = {3,4,3};
+		ANN.mANN(1, hl, 1);
 	}
 	
 }

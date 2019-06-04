@@ -60,7 +60,7 @@ public class Matrix {
 	
 	public static float sigmoid(float[][] matrixA, int a, int b)
 	{
-		float [][] erg = new float [10000][10000];
+		float [][] erg = new float [10000][10000]; 
 		for(int i=0; i<matrixA.length; i++)
 		{
 			for(int j=0; j<matrixA[0].length; j++)
