@@ -3,4 +3,5 @@
 <fullyQualifiedTypeName name="Matrix.InvalidMatrxException"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="Matrix.Matrix"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

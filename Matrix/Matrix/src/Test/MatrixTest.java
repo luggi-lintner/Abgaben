@@ -95,7 +95,7 @@ public class MatrixTest {
 	public void arrayTestTest()
 	{
 		int[] hl = {3,4,3};
-		ANN.mANN(1, hl, 1);
+		
 	}
 	
 }
